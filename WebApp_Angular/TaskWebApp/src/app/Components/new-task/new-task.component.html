@@ -1,0 +1,45 @@
+<h3>{{model.id > 0 ? 'Edit Task' : 'New Task'}}</h3>
+<hr>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-4">
+        <label for="tittle" class="form-label">Title</label>
+        <input type="text" placeholder="Title....."  class="form-control" id="tittle" name="tittle" required  [(ngModel)]="model.tittle">
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="mb-4">
+        <label for="ddlCreateDate" class="form-label">Status</label>
+        <select name="ddlCreateDate" id="ddlCreateDate" class="form-select from-select-sm" required [(ngModel)]="model.eStatus">
+          <option value="-1"> -- Select -- </option>
+          <option value="0">Pendiente</option>
+          <option value="1">EnProceso</option>
+          <option value="2">Completada</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="mb-4">
+        <label for="txtCreateDate" class="form-label">Creation Date</label>
+        <input type="date" class="form-control" id="txtCreateDate" name="txtCreateDate" required [(ngModel)]="model.createDate">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="mb-4">
+        <label for="txtDescription" class="form-label">Description</label>
+        <textarea name="comment" id="comment" rows="4" placeholder="Description....." class="form-control" required [(ngModel)]="model.description"></textarea>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="d-grid gap-3 col-3 float-end m-2">
+    <button class="btn btn-primary btn-lg" type="submit" [disabled]="contactForm.invalid">Save</button>
+  </div>
+  <div class="d-grid gap-2 col-2 float-end" style="margin-right: 10px;">
+    <button class="btn btn-danger btn-lg m-2" (click)="onCancel()" >Cancel</button>
+  </div>
+</form>
+

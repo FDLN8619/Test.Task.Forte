@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+.body-main{
+  background-color: #1B1534;
+  position: relative;
+  padding-bottom: 3em;
+  color: white;
+  /* min-height: 100vh; */
+}
+.footer-main{
+  position: absolute;
+  bottom: 0;
+  padding:1em 0;
+  width: 100%;
+  color: white;
+}

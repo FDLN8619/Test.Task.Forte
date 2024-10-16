@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Task.Api.Domain\Test.Task.Api.Domain.csproj" />
+    <ProjectReference Include="..\Test.Task.Api.Repository\Test.Task.Api.Repository.csproj" />
+  </ItemGroup>
+
+</Project>

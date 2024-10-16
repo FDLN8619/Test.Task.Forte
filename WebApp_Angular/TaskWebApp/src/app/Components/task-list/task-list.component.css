@@ -1,0 +1,14 @@
+h1 {
+    text-align: center;
+  }
+.principalCard {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.cardLogin {
+    border: solid 1px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+}
